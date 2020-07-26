@@ -22,12 +22,7 @@ zer wiodących liczby MM.
 
 class Hour:
     def __init__(self, a : str):
-        if ':' in a:
-            self.h, self.m = map(int, a.split(':'))
-        else:
-            s = str(a).zfill(4)
-            self.h = int(s[:2])
-            self.m = int(s[2:])
+        self.h, self.m = map(int, a.split(':'))
 
     def __repr__(self):
         return str(self.h).zfill(2) + ':' + str(self.m).zfill(2)
